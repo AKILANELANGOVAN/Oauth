@@ -1,0 +1,215 @@
+																																																																					:root {
+  --primary-color: #2d74c8;
+  --secondary-color: #3aaae4;
+  --active-color: #ff9e00;
+  --text-color: #212121;
+  --bs-border-color: #b5b5b5;
+  --primary-font: "Noto Sans", serif;
+}
+body {
+	margin:0;
+	padding:0;
+	text-size-adjust: 100%;
+	/* font-family: "Noto Sans", serif; */
+	font-size:14px;
+	font-weight: 400;
+    line-height: 1.6;
+    color: var(--text-color);
+	background-color:#e7e7e7;
+	font-optical-sizing: auto;
+}
+a {
+  text-decoration: none;
+}
+a:active, a:focus, button:active, button:focus, input:active, input:focus, .form-control:active, .form-control:focus, .form-select:active, .form-select:focus {
+	outline:none !important;
+	box-shadow:none !important;
+}
+input, .form-control, .form-select, .btn, .dropdown-menu {
+	font-size:14px;
+}
+.list-style-none {
+    list-style: none;
+}
+.match-height > [class*='col'] {
+    display: flex;
+}
+.btn-primary, .bg-primary {
+	background-color:var(--primary-color) !important;
+	border-color:var(--primary-color) !important;
+}
+.btn-primary:hover {
+	background-color:var(--secondary-color) !important;
+	border-color:var(--secondary-color) !important;
+}
+/* Login Page */
+.login-page {
+
+	background-size:cover;
+	background-position: top center;
+	background-attachment:fixed;
+	height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.login-form {
+	background:#ffffff;
+	width:400px;
+	padding:2.5rem 1.5rem;
+	margin:0 50px;
+	border-radius:0.5rem;
+	box-shadow:0 20px 40px rgba(0,0,0,0.5);
+}
+.navbar-brand {
+	padding-top:0;
+}
+.navbar-brand img {
+	max-width:70px;
+}
+.navbar-nav .nav-link {
+	color:#ffffff !important;
+}
+.navbar-nav .nav-link:hover {
+	color:var(--active-color) !important;
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+	color:var(--active-color) !important;
+}
+.content-wrapper {
+    margin-top: 54px;
+    padding: 1rem;
+    margin-bottom: 40px;
+}
+table.dataTable th, table.dataTable td {
+    vertical-align: middle;
+}
+svg {
+	vertical-align:text-bottom;
+}
+svg.feather {
+    width: 16px;
+    height: 16px;
+}
+time {
+	font-size:3rem;
+	font-weight:600;
+}
+.cls-1{
+  fill:none;
+  stroke:#231f20;
+  stroke-miterlimit:10;
+  stroke-width:5px;
+}
+.cls-1 {
+    stroke: green;
+ }
+.circle {
+  stroke-dasharray: 700;
+  stroke-dashoffset: 700;
+}
+.checkmark {
+  stroke-dasharray: 150;
+  stroke-dashoffset: 150;
+}
+
+.run-animation {  
+  .circle {
+    animation: 1.5s circleDraw forwards;
+  }
+
+  .checkmark {
+    animation: 0.75s checkmarkDraw forwards;
+    animation-delay: 1s;
+  }
+}
+
+@keyframes circleDraw {
+  from {
+    stroke-dashoffset: 700;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes checkmarkDraw {
+  from {
+    stroke-dashoffset: 150;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.voice-recoding-cords {
+	height:200px;
+	background:#f5f5f5;
+}
+#voice-canvas {
+	height:100%;
+}
+.record-list li {
+	margin-bottom:1rem;
+	padding-bottom:1rem;
+	background: #f5f5f5;
+    padding: 1rem;
+    border-radius: 0.5rem;
+	cursor:pointer;
+	transition:0.2s;
+}
+.record-list li:last-child {
+	margin-bottom:0;
+}
+.record-list li:hover {
+	background: #f0f0f0;
+}
+/* Footer */
+.footer {
+	position:fixed;
+	bottom:0;
+	width:100%;
+	left:0;
+	background-color:#809bba;	
+	text-align:center;
+	font-size:12px;
+	padding:4px 0;
+}
+.footer a {
+	color:#ffffff;
+}
+/* Media Queries */
+@media (max-width:600px) {
+	.login-form {
+		margin:0 auto;
+	}
+}
+
+.loader-wrapper { 
+	position:fixed;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	background:rgba(0,0,0,0.65);
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	z-index: 1057;
+}
+.loader {
+	width: 50px;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	background: radial-gradient(farthest-side,#3aaae4 94%,#0000) top/8px 8px no-repeat, conic-gradient(#0000 30%,#3aaae4);
+	-webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 8px),#000 0);
+	animation: l13 1s infinite linear;
+}
+@keyframes l13{ 
+	100%{transform: rotate(1turn)}
+}
+
+.no-data-row td {
+    text-align: center;
+    font-weight: 400;
+  }
+

@@ -1,0 +1,55 @@
+	<div class="login-page">
+		<div class="login-form">
+			<div class="logo">
+				<!-- <div class="text-center mb-4"> -->
+					<!-- <img src="assets/images/logo.png" alt="" style="width:200px"> -->
+				<!-- </div> -->
+				<h4 class="mb-4 text-center">Oauth Learning</h4>
+			</div>
+			<h6 class="text-center mb-3">Please enter Email to continue</h6>
+			<div class="mobileInput mb-3">
+				<label>Email <span class="text-danger">*</span></label>
+				<input
+				  type="text"
+				  class="form-control"
+				  placeholder="Please enter mobile number"
+				  
+				  minlength="10"
+				  maxlength="10"
+				  name="mobileNumber"
+				  required
+				/>
+			  </div>
+			  <div class="mb-3">
+				<label>Password <span class="text-danger">*</span></label>
+				<input
+				  type="text"
+				  class="form-control"
+				  id="otpInput"
+				 
+				  minlength="6"
+				  maxlength="6"
+				  name="otp"
+				  required
+				/>
+			  </div>
+			  <div class="d-grid mb-3">
+				<div class="d-grid mb-3">
+					<button
+					  type="button"
+					  class="btn btn-primary btn-block"
+					  id="submitBtn"
+					  disabled
+					>
+					  Submit
+					</button>
+			  </div>
+			  <hr/>
+			  <div class="d-grid mb-3">
+				<button class="google-btn" type="button" (click)="trigger_Oauth()">
+                <div class="google-logo"></div>
+                Continue with Google
+            </button>
+		  </div>
+		</div>
+	</div>
